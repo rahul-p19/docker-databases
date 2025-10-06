@@ -14,8 +14,14 @@ docker-compose -f ./mongodb/docker-compose.yml up
 
 # Connection string
 
+> Without replica set
 ```bash
 mongodb://root:example@localhost:27017/dbName?retryWrites=true&w=majority&authSource=admin
+```
+
+> With replica set
+```bash
+mongodb://root:example@localhost:27017/dbName?retryWrites=true&w=majority&authSource=admin&replicaSet=rs0
 ```
 
 # Connect using MongoDB Compass GUI client
